@@ -1,0 +1,22 @@
+{
+    "name": "Cheese",
+    "short_name": "Cheese",
+    "description": "치즈와 함께, 대화를 나누어보세요!",
+    "icons": [
+      {
+        "src": "./res/icon256.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      },
+      {
+        "src": "./res/icon512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "./index.html",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "theme_color": "#121214",
+    "background_color": "#121214"
+  }

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html manifest="CACHE.manifest">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <title>치즈</title>
+
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+    <link rel="manifest" href="./app.webmanifest">
+
+    <link rel="stylesheet" href="./style/main.css">
+
+    <script src="./scripts/API.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/chat.js"></script>
+</head>
+
+<body>
+    <audio src="./res/Typing.mp3" id="btnse"></audio>
+    
+    <!-- 앱 컨테이너 -->
+    <app-container>
+        <!-- 스플래쉬 스크린 -->
+        <splash-screen>
+            <img src="./res/App.png">
+        </splash-screen>
+
+        <!-- 채팅 스크린 -->
+        <chat-screen class="zoom-screen">
+
+            <!-- 메뉴 -->
+            <menu-layout>
+                <!-- 메뉴 접근 -->
+                <menu-button>
+                    <menu-label>주제</menu-label>
+                </menu-button>
+                <menu-desktop></menu-desktop>
+                <menu-blocker></menu-blocker>
+                <!-- 메뉴 버튼 -->
+                <menu-submenu>
+                    <!-- 메뉴 버튼 1 : 새로운 주제 -->
+                    <submenu-button class="l-margin primary" onclick="newTopic();">
+                        <submenu-icon class="Newtopic-icon"></submenu-icon>
+                        <submenu-text>새로운 주제</submenu-text>
+                    </submenu-button>
+
+                    <!-- 메뉴 버튼 2 : 다시 쓰기 -->
+                    <submenu-button class="r-margin secondary" onclick="reWrite();">
+                        <submenu-icon class="Rewrite-icon"></submenu-icon>
+                        <submenu-text>다시 쓰기</submenu-text>
+                    </submenu-button>
+                </menu-submenu>
+            </menu-layout>
+
+            <!-- 채팅 -->
+            <chat-layout>
+                <init-content>
+                    <title-text>반가워요,</title-text>
+                    <subtitle-text>아래 주제로 대화를 시작할 수 있어요!</subtitle-text>
+
+                    <scroll-area>
+                        <init-group>
+                            <init-item>
+                                <item-icon class="icon-chat"></item-icon>
+                                <item-title>대화 나누기</item-title>
+                                <item-subtitle>"배고파.. 점심 메뉴 추천해줘!"</item-subtitle>
+                            </init-item>
+                            <init-item>
+                                <item-icon class="icon-form"></item-icon>
+                                <item-title>질문 하기</item-title>
+                                <item-subtitle>"내 진로에 대해서 조언해줘"</item-subtitle>
+                            </init-item>
+                            <init-item>
+                                <item-icon class="icon-bandage"></item-icon>
+                                <item-title>자기 돌봄</item-title>
+                                <item-subtitle>"자기 돌봄을 위해서 뭐해야해?"</item-subtitle>
+                            </init-item>
+                        </init-group>
+                    </scroll-area>
+                </init-content>
+            </chat-layout>
+
+            <!-- 입력 -->
+            <input-layout>
+                <input-box>
+                    <fake-input>
+                        <input type="text" id="user-input">
+                    </fake-input>
+                    <submit-input>
+                        <submit-icon></submit-icon>
+                    </submit-input>
+                </input-box>
+                <notice-text>
+                    가끔씩 불쾌감을 주거나, 만족스럽지 못한 결과를 줄 수 있어요.<br>
+                    하지만, 이 점이 저희 <team-font>PLAYGROUND</team-font> 팀을 대변하지는 않아요.
+                </notice-text>
+            </input-layout>
+
+            <!-- 메뉴 시인성 필터 -->
+            <expand-hidden-filter></expand-hidden-filter>
+        </chat-screen>
+
+    </app-container>
+</body>
+
+</html>
